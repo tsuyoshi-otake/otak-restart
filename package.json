@@ -1,7 +1,7 @@
 {
   "name": "otak-restart",
   "displayName": "otak-restart",
-  "description": "This extension adds a button to VSCode that lets you restart the Extension Host with a single click. It streamlines the process, saving you from having to use the command palette or restart commands during development or troubleshooting, thus improving efficiency and easing debugging.",
+  "description": "Adds a button to VSCode that lets you restart the Extension Host or reload window with a single click. Streamlines the development process by providing quick access to restart operations.",
   "publisher": "odangoo",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -28,23 +28,33 @@
     "commands": [
       {
         "command": "otak-restart.restartExtensionHost",
-        "title": "拡張機能ホストを再起動",
+        "title": "Restart Extension Host",
+        "category": "Extension Host"
+      },
+      {
+        "command": "otak-restart.reloadWindow",
+        "title": "Reload Window",
+        "category": "Extension Host"
+      },
+      {
+        "command": "otak-restart.showOptions",
+        "title": "Show Restart Options",
         "category": "Extension Host"
       }
     ],
     "configuration": {
       "title": "Extension Host Restart",
       "properties": {
-        "otak-restart.buttonPosition": {
+        "otakRestart.buttonPosition": {
           "type": "string",
           "default": "right",
           "enum": ["left", "right"],
-          "description": "ステータスバーでのボタンの位置"
+          "description": "Position of the button in the status bar"
         },
-        "otak-restart.buttonText": {
+        "otakRestart.buttonText": {
           "type": "string",
-          "default": "$(sync) 再起動",
-          "description": "ボタンに表示するテキスト（VSCodeのアイコンを含む）"
+          "default": "$(sync) Restart",
+          "description": "Text to display on the button (including VSCode icons)"
         }
       }
     }
