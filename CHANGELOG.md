@@ -1,9 +1,31 @@
 # Change Log
 
-All notable changes to the "otak-restart" extension will be documented in this file.
+## [1.0.0] - 2025-02-17
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Added
+- One-click restart functionality for:
+  - Extension Host restart
+  - VSCode window reload
+- Status bar button with customizable position and text
+- Clear confirmation dialogs
+- Command palette integration
+- Error handling with detailed messages
 
-## [Unreleased]
+### Features
+- Simple and intuitive restart operations
+- Customizable button location (left/right)
+- Support for VSCode icons in button text
+- Non-intrusive confirmation dialogs
 
-- Initial release
+### Notes
+- Requires VSCode 1.9.0 or higher
+- Settings are applied immediately
+- No restart required for configuration changes
+
+## [0.0.1] - 2025-02-17
+
+### Added
+- Initial release of Otak Restart Extension for VSCode
+- Basic Extension Host restart functionality
+- Status bar integration
+- Simple configuration options

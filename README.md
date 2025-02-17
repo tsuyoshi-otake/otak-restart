@@ -45,7 +45,7 @@ This extension can be customized through VS Code settings:
 
 ## Requirements
 
-- Visual Studio Code 1.9.0 or higher
+- Visual Studio Code 1.90.0 or higher
 
 ## Extension Settings
 
