@@ -17,6 +17,8 @@ This extension adds a button to VSCode that lets you restart the Extension Host 
 
 # Usage
 
+![](images/otak-restart.png)
+
 1. Click the restart button in the status bar
 2. Select your desired operation from the dialog:
    - `Restart Extension Host`: Restarts only the Extension Host process
