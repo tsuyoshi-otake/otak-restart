@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.1] - 2025-02-18
+
+### Changed
+- Simplified Extension Host restart implementation
+- Removed unnecessary notifications and timeout handling
+- Improved stability by reducing complexity
+
 ## [1.0.0] - 2025-02-17
 
 ### Added

@@ -41,6 +41,7 @@ async function showRestartOptions() {
         );
 
         if (selection === 'Restart Extension Host') {
+            // 単純に実行するだけにする
             await vscode.commands.executeCommand('workbench.action.restartExtensionHost');
         } else if (selection === 'Reload Window') {
             await vscode.commands.executeCommand('workbench.action.reloadWindow');
