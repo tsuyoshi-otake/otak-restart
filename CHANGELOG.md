@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.2] - 2025-02-18
+
+### Changed
+- Performance improvements for Extension Host restart process
+- Optimized internal state management
+- Enhanced error handling and recovery
+
 ## [1.0.1] - 2025-02-18
 
 ### Changed

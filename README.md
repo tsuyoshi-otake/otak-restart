@@ -1,6 +1,6 @@
 <p align="center">
   <h1 align="center">otak-restart</h1>
-  <p align="center">One-click restart for Extension Host and VSCode window.</p>
+  <p align="center">Two-click restart for Extension Host and VSCode window.</p>
 </p>
 
 ---
