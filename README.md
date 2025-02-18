@@ -5,7 +5,7 @@
 
 ---
 
-This extension adds a button to VSCode that lets you restart the Extension Host or reload window with a single click. It streamlines the development process, saving you from having to use the command palette or restart commands during development or troubleshooting, thus improving efficiency and easing debugging.
+This extension adds a button to VSCode that lets you restart the Extension Host or reload window with two clicks. It streamlines the development process, saving you from having to use the command palette or restart commands during development or troubleshooting, thus improving efficiency and easing debugging.
 
 # Features
 
@@ -13,7 +13,7 @@ This extension adds a button to VSCode that lets you restart the Extension Host 
 - Provides two restart options:
   - Restart Extension Host: Restarts only the Extension Host
   - Reload Window: Reloads the entire VS Code window
-- Simple one-click access with clear confirmation dialogs
+- Simple two-click access with clear confirmation dialogs
 
 # Usage
 

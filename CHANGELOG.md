@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.3] - 2025-02-18
+
+### Changed
+- Fixed terminology in documentation from "single-click" to "two-click"
+- Updated user interface descriptions for accuracy
+
 ## [1.0.2] - 2025-02-18
 
 ### Changed
