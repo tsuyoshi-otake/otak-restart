@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     // コマンドの登録とイベントリスナーの設定
     const disposables = [
-        vscode.commands.registerCommand('otak-restart.restartExtensionHost', () => vscode.commands.executeCommand('workbench.action.restartExtensionHost')),
+        vscode.commands.registerCommand('otak-restart.restartExtensionHost', async () => await vscode.commands.executeCommand('workbench.action.restartExtensionHost')),
         vscode.commands.registerCommand('otak-restart.reloadWindow', () => vscode.commands.executeCommand('workbench.action.reloadWindow'))
     ];
 
@@ -40,6 +40,7 @@ function createStatusBarItem(): vscode.StatusBarItem {
     
     const item = vscode.window.createStatusBarItem(alignment, 100);
     const buttonText = config.get<string>('buttonText') || '$(sync) Restart';
+    item.command = 'otak-restart.restartExtensionHost';
     item.text = buttonText;
 
     const tooltip = new vscode.MarkdownString(undefined, true);
