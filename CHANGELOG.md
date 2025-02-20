@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.5] - 2025-02-20
+
+### Changed
+- Updated tooltip interface for better usability
+- Enhanced error handling in restart operations
+- Optimized status bar button responsiveness
+
 ## [1.0.4] - 2025-02-20
 
 ### Changed
