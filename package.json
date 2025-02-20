@@ -1,7 +1,7 @@
 {
   "name": "otak-restart",
   "displayName": "otak-restart",
-  "description": "Two-click restart for Extension Host and VSCode window.",
+  "description": "Quick restart operations for Extension Host and VSCode window via status bar tooltip.",
   "publisher": "odangoo",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -13,7 +13,7 @@
     "url": "https://github.com/tsuyoshi-otake-system-exe-jp/otak-restart/issues"
   },
   "homepage": "https://github.com/tsuyoshi-otake-system-exe-jp/otak-restart#readme",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -43,11 +43,6 @@
       {
         "command": "otak-restart.reloadWindow",
         "title": "Reload Window",
-        "category": "Extension Host"
-      },
-      {
-        "command": "otak-restart.showOptions",
-        "title": "Show Restart Options",
         "category": "Extension Host"
       }
     ],

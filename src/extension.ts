@@ -10,7 +10,8 @@ export function activate(context: vscode.ExtensionContext) {
 
     // コマンドの登録とイベントリスナーの設定
     const disposables = [
-        vscode.commands.registerCommand('otak-restart.showOptions', showRestartOptions)
+        vscode.commands.registerCommand('otak-restart.restartExtensionHost', () => vscode.commands.executeCommand('workbench.action.restartExtensionHost')),
+        vscode.commands.registerCommand('otak-restart.reloadWindow', () => vscode.commands.executeCommand('workbench.action.reloadWindow'))
     ];
 
     // 設定変更監視
@@ -31,27 +32,6 @@ function setupStatusBarItem(context: vscode.ExtensionContext) {
     updateStatusBarItem();
 }
 
-async function showRestartOptions() {
-    try {
-        const selection = await vscode.window.showWarningMessage(
-            'Select an operation to perform:',
-            { modal: true },
-            'Restart Extension Host',
-            'Reload Window'
-        );
-
-        if (selection === 'Restart Extension Host') {
-            // 単純に実行するだけにする
-            await vscode.commands.executeCommand('workbench.action.restartExtensionHost');
-        } else if (selection === 'Reload Window') {
-            await vscode.commands.executeCommand('workbench.action.reloadWindow');
-        }
-    } catch (error) {
-        console.error('Error during operation:', error);
-        vscode.window.showErrorMessage('An error occurred while performing the operation.');
-    }
-}
-
 function createStatusBarItem(): vscode.StatusBarItem {
     const config = vscode.workspace.getConfiguration('otakRestart');
     const alignment = config.get('buttonPosition') === 'left' 
@@ -59,18 +39,35 @@ function createStatusBarItem(): vscode.StatusBarItem {
         : vscode.StatusBarAlignment.Right;
     
     const item = vscode.window.createStatusBarItem(alignment, 100);
-    item.command = 'otak-restart.showOptions';
     const buttonText = config.get<string>('buttonText') || '$(sync) Restart';
     item.text = buttonText;
-    item.tooltip = 'Click to show restart menu';
+
+    const tooltip = new vscode.MarkdownString(undefined, true);
+    tooltip.appendMarkdown('Available Operations\n\n');
+    tooltip.appendMarkdown('---\n\n');
+    tooltip.appendMarkdown('[$(sync) Restart Extension Host](command:otak-restart.restartExtensionHost "Restart Extension Host")  ');
+    tooltip.appendMarkdown('[$(sync) Reload Window](command:otak-restart.reloadWindow "Reload Window")');
+    tooltip.isTrusted = true;
+    tooltip.supportHtml = true;
+
+    item.tooltip = tooltip;
     item.show();
     return item;
 }
 
-function updateStatusBarItem() {
+async function updateStatusBarItem() {
     const config = vscode.workspace.getConfiguration('otakRestart');
     statusBarItem.text = config.get<string>('buttonText') || '$(sync) Restart';
-    statusBarItem.tooltip = 'Click to show restart menu';
+
+    const tooltip = new vscode.MarkdownString(undefined, true);
+    tooltip.appendMarkdown('Available Operations\n\n');
+    tooltip.appendMarkdown('---\n\n');
+    tooltip.appendMarkdown('[$(sync) Restart Extension Host](command:otak-restart.restartExtensionHost "Restart Extension Host")  ');
+    tooltip.appendMarkdown('[$(sync) Reload Window](command:otak-restart.reloadWindow "Reload Window")');
+    tooltip.isTrusted = true;
+    tooltip.supportHtml = true;
+
+    statusBarItem.tooltip = tooltip;
 }
 
 export function deactivate() {

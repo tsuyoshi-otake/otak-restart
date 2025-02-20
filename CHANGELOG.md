@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.4] - 2025-02-20
+
+### Changed
+- Changed operation method from dialog to tooltip-based interface
+- Added clickable links in status bar tooltip for quick actions
+- Improved UX by reducing the number of clicks needed for operations
+
 ## [1.0.3] - 2025-02-18
 
 ### Changed
