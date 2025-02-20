@@ -43,7 +43,7 @@ function createStatusBarItem(): vscode.StatusBarItem {
     item.text = buttonText;
 
     const tooltip = new vscode.MarkdownString(undefined, true);
-    tooltip.appendMarkdown('Available Operations\n\n');
+    tooltip.appendMarkdown('**Available Operations**\n\n');
     tooltip.appendMarkdown('---\n\n');
     tooltip.appendMarkdown('[$(sync) Restart Extension Host](command:otak-restart.restartExtensionHost "Restart Extension Host")  ');
     tooltip.appendMarkdown('[$(sync) Reload Window](command:otak-restart.reloadWindow "Reload Window")');
