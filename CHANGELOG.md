@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.6] - 2025-02-21
+
+### Fixed
+- Fixed status bar button's restart operation cancellation issue
+- Improved async command handling for Extension Host restart
+
 ## [1.0.5] - 2025-02-20
 
 ### Changed
