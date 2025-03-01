@@ -7,13 +7,13 @@
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tsuyoshi-otake-system-exe-jp/otak-restart"
+    "url": "https://github.com/tsuyoshi-otake/otak-restart"
   },
   "bugs": {
-    "url": "https://github.com/tsuyoshi-otake-system-exe-jp/otak-restart/issues"
+    "url": "https://github.com/tsuyoshi-otake/otak-restart/issues"
   },
-  "homepage": "https://github.com/tsuyoshi-otake-system-exe-jp/otak-restart#readme",
-  "version": "1.0.6",
+  "homepage": "https://github.com/tsuyoshi-otake/otak-restart#readme",
+  "version": "1.0.7",
   "engines": {
     "vscode": "^1.90.0"
   },
